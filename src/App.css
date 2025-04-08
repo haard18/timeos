@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@font-face {
+  font-family: 'kodomono';
+  src: url('../public/KodeMono-VariableFont_wght.ttf') format('truetype');
+}
+
+#root{
+  background-color: red;
+}
