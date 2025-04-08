@@ -21,7 +21,7 @@ export type Task = {
     date: string; // YYYY-MM-DD
 };
 
-export const tasksAtom = atom<Task[]>([]);
+export const tasksAtom = atomWithStorage<Task[]>('tasks',[]);
 
 // --- Actions ---
 
