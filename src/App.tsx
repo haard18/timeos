@@ -10,6 +10,7 @@ import YouTubeWidget from "./widgets/YoutubeWidget";
 import SpotifyWidget from "./widgets/Spotify";
 import ExcalidrawWidget from "./widgets/Excalidraw";
 import LandingPage from "./Pages/Home";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
   const onboardingComplete = useAtomValue(onboardingCompleteAtom);
@@ -18,6 +19,8 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
+      {/* Global styles */}
       {/* Show Navbar on all pages except onboarding */}
       {!["/", "/home", "/onboarding"].includes(location.pathname) && (
         <Navbar activeTool={activeTool} setActiveTool={setActiveTool} />
