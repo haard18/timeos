@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X, ExternalLink } from "lucide-react";
 
-const YOUTUBE_API_KEY = "AIzaSyDgtCn7mBrGAl8C-bklcHVHIdSItXLqPAs";
+const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 export default function YouTubeWidget() {
   const [videoUrl, setVideoUrl] = useState("");
