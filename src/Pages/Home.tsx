@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function LandingPage() {
   useEffect(() => {
-    document.title = "CozyDesk — Modular Mayhem for Hackers";
+    document.title = "timeos- get into flow state ";
   }, []);
 
   return (
