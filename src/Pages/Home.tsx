@@ -81,12 +81,12 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="text-center text-sm text-[#666] py-10 border-t border-[#2e2c3d]">
-        <span className="text-[#00ffcc]">Made in the midnight labs</span> —
-        follow us on{" "}
+        <span className="text-[#00ffcc]">Made with 🫶🏻</span> —
+        follow me on{" "}
         <a href="#" className="underline hover:text-white">
           GitHub
-        </a>{" "}
-        &{" "}
+        </a>{"github.com/haard18"}
+        &{"x.com/solanki_haard"}
         <a href="#" className="underline hover:text-white">
           X
         </a>
