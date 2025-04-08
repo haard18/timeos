@@ -24,12 +24,12 @@ export default function Navbar({ activeTool, setActiveTool }: Props) {
   }, []);
 
   return (
-    <div className="w-fit mx-auto px-8 py-3 mt-4 rounded-2xl bg-black/70 text-white shadow-xl backdrop-blur-lg flex items-center justify-between gap-10 sticky top-4 z-50 border border-white/10">
-      <h1 className="text-lg font-semibold tracking-tight whitespace-nowrap">
-        {name ? `${greeting}, ${name} ` : "🧠 Welcome to FocusDash"}
+    <div className="w-full px-4 md:px-8 py-3 mt-4 rounded-2xl bg-black/70 text-white shadow-xl backdrop-blur-lg flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 sticky top-4 z-50 border border-white/10 max-w-[95%] md:max-w-max mx-auto">
+      <h1 className="text-base md:text-lg font-semibold tracking-tight text-center md:text-left whitespace-nowrap">
+        {name ? `${greeting}, ${name}` : "🧠 Welcome to FocusDash"}
       </h1>
 
-      <div className="flex gap-6 items-center">
+      <div className="flex gap-4 md:gap-6 items-center justify-center flex-wrap">
         <button onClick={() => toggleTool("pomodoro")} title="Pomodoro Timer">
           <Clock
             className={`w-5 h-5 transition ${
@@ -44,7 +44,7 @@ export default function Navbar({ activeTool, setActiveTool }: Props) {
             } hover:text-green-400`}
           />
         </button>
-        <button onClick={() => toggleTool("notebook")} title="GitHub">
+        <button onClick={() => toggleTool("notebook")} title="Notebook">
           <Notebook
             className={`w-5 h-5 transition ${
               activeTool === "notebook" ? "text-white" : "text-gray-400"
