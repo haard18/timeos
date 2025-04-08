@@ -18,11 +18,21 @@ export default function Navbar({ activeTool, setActiveTool }: Props) {
 
   const greeting = useMemo(() => {
     const hour = new Date().getHours();
-    if (hour < 12) return "Good morning";
-    if (hour < 18) return "Good afternoon";
-    return "Good evening";
+  
+    if (hour >= 0 && hour < 3) return " Burning the midnight oil?";
+    if (hour >= 3 && hour < 5) return " Still up? Night grind never stops.";
+    if (hour >= 5 && hour < 7) return "Rise and grind, early bird!";
+    if (hour >= 7 && hour < 9) return "A fresh start. Let’s crush it.";
+    if (hour >= 9 && hour < 12) return "Peak focus hours. You got this.";
+    if (hour >= 12 && hour < 14) return " Quick reset? It’s lunch o’clock.";
+    if (hour >= 14 && hour < 17) return " Afternoon push—stay in flow.";
+    if (hour >= 17 && hour < 19) return " Wrapping up strong?";
+    if (hour >= 19 && hour < 21) return " Slow down or one last sprint?";
+    if (hour >= 21 && hour < 23) return " Wind down, you’ve earned it.";
+    return "🌌 Night owl mode. One more thing?";
   }, []);
-
+  
+  
   return (
     <div className="w-full px-4 md:px-8 py-3 mt-4 rounded-2xl bg-black/70 text-white shadow-xl backdrop-blur-lg flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 sticky top-4 z-50 border border-white/10 max-w-[95%] md:max-w-max mx-auto">
       <h1 className="text-base md:text-lg font-semibold tracking-tight text-center md:text-left whitespace-nowrap">
