@@ -1,5 +1,5 @@
 // src/components/Navbar.tsx
-import { Clock, Music, Notebook, Youtube } from "lucide-react";
+import { Clock, Music, Notebook, Youtube,CheckCheckIcon } from "lucide-react";
 import { useAtom } from "jotai";
 import { nameAtom } from "../lib/store";
 import { useMemo } from "react";
@@ -67,6 +67,13 @@ export default function Navbar({ activeTool, setActiveTool }: Props) {
               activeTool === "youtube" ? "text-red-400" : "text-gray-400"
             } hover:text-red-400`}
           />
+        </button>
+        <button onClick={() => toggleTool("stats")} title="Daily Stats">
+            <CheckCheckIcon
+              className={`w-5 h-5 transition ${
+                activeTool === "stats" ? "text-white" : "text-gray-400"
+              } hover:text-white`}
+            />
         </button>
       </div>
     </div>

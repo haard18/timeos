@@ -49,7 +49,18 @@ export const createTaskAtom = atom(null, (get, set, newTask: CreateTaskPayload) 
     };
     set(tasksAtom, [...tasks, task]);
 });
-
+// Optional: derived atom for completed tasks count per day
+export const completedCountAtom = atom((get) => {
+    const tasks = get(tasksAtom);
+    const today = new Date().toISOString().split("T")[0];
+    return tasks.filter((t) => t.date === today && t.done).length;
+  });
+  
+  export const totalTodayAtom = atom((get) => {
+    const tasks = get(tasksAtom);
+    const today = new Date().toISOString().split("T")[0];
+    return tasks.filter((t) => t.date === today).length;
+  });
 // Toggle done
 export const toggleDoneAtom = atom(
     null,

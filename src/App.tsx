@@ -9,6 +9,7 @@ import PomodoroWidget from "./widgets/Pomodoro";
 import YouTubeWidget from "./widgets/YoutubeWidget";
 import SpotifyWidget from "./widgets/Spotify";
 import ExcalidrawWidget from "./widgets/Excalidraw";
+import DailyStats from "./widgets/Task";
 import LandingPage from "./Pages/Home";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -52,6 +53,7 @@ export default function App() {
       {activeTool === "pomodoro" && <PomodoroWidget />}
       {activeTool === "spotify" && <SpotifyWidget />}
       {activeTool === "youtube" && <YouTubeWidget />}
+      {activeTool === "stats" && <DailyStats />}
       {activeTool === "notebook" && <ExcalidrawWidget />}
     </>
   );
